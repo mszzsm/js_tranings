@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="App">
+    <h1> А яким грузином ти являєшся? </h1>
+    <input id="name" type="text" name="name" v-bind="name">
+    <input id="surname" type="text" name="surname" v-bind="surname">
+    <button onclick="myFunction()">Try it</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <h1 id="georgian"> </h1>
+</div>
+    <script>
+       var myFunction = function(){
+            var name = $('#name').value;
+            var surname = $('#surname').value;
+            var subName = name.substr(0, 2);
+            var subSurname = surname.substr(0, 2);
+            georgian = subName + "-" + subSurname + "-швилли";
+            document.getElementById('georgian').innerHTML = georgian;
+        }
+    </script>
+</body>
+</html>
